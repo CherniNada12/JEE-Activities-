@@ -1,0 +1,2 @@
+com.idsd.projetinjectiondependances.DaoImpl
+com.idsd.projetinjectiondependances.MetierImpl

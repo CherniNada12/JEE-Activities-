@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: customerservice
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer_test?createDatabaseIfNotExist=true
+    username: root
+    password: ""  # Remplir avec ton mot de passe si nécessaire
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # La base de données sera mise à jour automatiquement
+    show-sql: true  # Affiche les requêtes SQL dans la console
+    properties:
+      hibernate:
+        format_sql: true  # Formate les requêtes SQL
+        dialect: org.hibernate.dialect.MySQL8Dialect  # Spécifie le dialecte MySQL
+
+  thymeleaf:
+    cache: false  # Désactive le cache pour un développement plus rapide
+
+# Eureka Client Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
